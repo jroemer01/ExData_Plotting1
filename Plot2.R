@@ -25,7 +25,7 @@ my_2day_power$DateTime<- with(my_2day_power,as.POSIXct(paste(Date, Time), format
 #opening a PNG file on the local file system
 png(filename = "plot2.png", width=480, height=480)
 
-plot(Global_active_power/1000~DateTime,my_2day_power,type="l",xlab="",ylab="Global Active Power (kilowatts)")
+plot(Global_active_power~DateTime,my_2day_power,type="l",xlab="",ylab="Global Active Power (kilowatts)")
 #close the file
 dev.off()
 
